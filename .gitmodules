@@ -1,6 +1,6 @@
 [submodule "wrenbind17"]
 	path = wrenbind17
 	url = https://github.com/matusnovak/wrenbind17
-[submodule "Cube2D-Game-Framework"]
-	path = Cube2D-Game-Framework
-	url = https://github.com/mastercuber55/Cube2D-Game-Framework
+[submodule "Cube2D-Framework"]
+	path = Cube2D-Framework
+	url = https://github.com/mastercuber55/Cube2D-Framework
