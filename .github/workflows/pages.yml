@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          path: docs # Checkout the repository into the 'docs' directory
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
