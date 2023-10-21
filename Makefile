@@ -18,12 +18,12 @@ RMOBJ	 = Bindings/raymath.o
 CPP      = g++
 CC       = gcc
 WINDRES  = windres
-OBJ      = main.o $(RLOBJ) $(RMOBJ) Bindings/Engine.o Icon.res
+OBJ      = Icon.res main.o $(RLOBJ) $(RMOBJ) Bindings/Engine.o
 LINKOBJ  = $(OBJ)
 LINKERS  = -static-libgcc -mwindows -lwren -lraylib -lopengl32 -lgdi32 -lwinmm
 LIBS     = -L"C:/TDM-GCC-64/lib" -L"C:/Libraries/raylib/lib" -L"C:/Libraries/wren/lib" $(LINKERS)
 INCS     = -I"C:/TDM-GCC-64/include" -I"C:/Libraries/raylib/include" -I"C:/Libraries/wren/include" 
-CXXINCS  = -I"./wrenbind17/include" -I"./Cube2D-Game-Framework"
+CXXINCS  = -I"./wrenbind17/include" -I"./Cube2D-Framework"
 BIN      = Cube2D.exe
 CFLAGS   = $(INCS)
 CXXFLAGS = $(CXXINCS) $(CFLAGS) -std=c++17

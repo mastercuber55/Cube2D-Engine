@@ -16,7 +16,6 @@ void BindEngine(Wren::VM & VM) {
 	// Cube2DCls.funcStaticExt<&Engine::Init>("Init");
 	// Cube2DCls.funcStaticExt<&Engine::Close>("Close");
 	Cube2DCls.funcStaticExt<&Engine::WASDMovement>("WASDMovement");
-	Cube2DCls.funcStaticExt<&Engine::GetRectsCount>("GetRectsCount");
 	Cube2DCls.funcStaticExt<&Engine::AreColorSame>("AreColorsSame");
 	Cube2DCls.funcStaticExt<&Engine::GetRandomPosition>("GetRandomPosition");
 
