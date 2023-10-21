@@ -3,3 +3,4 @@ description: A 2D game engine which uses wren as its scripting language
 theme: just-the-docs
 
 url: https://mastercuber55.github.io/Cube2D
+favicon_ico: "/Assets/Images/Icon.ico"
