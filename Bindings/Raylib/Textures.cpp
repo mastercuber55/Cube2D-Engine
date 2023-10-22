@@ -12,7 +12,6 @@ void BindRaylibTextures(Wren::ForeignModule& Module, Wren::ForeignKlassImpl<rl>&
 	Class.funcStaticExt<&rl::wLoadImage>("LoadImage");
 	Class.funcStaticExt<&rl::wLoadImageRaw>("LoadImageRaw");
 	Class.funcStaticExt<&rl::wLoadImageAnim>("LoadImageAnim");
-	// Class.funcStaticExt<&rl::wLoadImageFromMemory>("LoadImageFromMemory");
 	Class.funcStaticExt<&LoadImageFromTexture>("LoadImageFromTexture");
 	Class.funcStaticExt<&LoadImageFromScreen>("LoadImageFromScreen");
 	Class.funcStaticExt<&IsImageReady>("IsImageReady");

@@ -51,5 +51,5 @@ class SceneGame is Scene {
 
 [wren]: https://wren.io
 [raylib]: https://raylib.com
-[raymath]: https://github.com/raysan5/raylib/blob/master/src/raylib.h\
+[raymath]: https://github.com/raysan5/raylib/blob/master/src/raylib.h
 [Cube2D Framework]: https://github.com/mastercuber55/Cube2D-Framework

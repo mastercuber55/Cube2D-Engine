@@ -4,7 +4,7 @@ namespace Wren = wrenbind17;
 
 //----------------------------------------------------------------------------------
 // Structures Definition
-// Excluded: Material, BoneInfo, ModelAnimation, VrDeviceInfo and VrSteroConfig 
+// Excluded: Material, BoneInfo, ModelAnimation, VrDeviceInfo, VrSteroConfig, AudioStreamCls, SoundCls, MusicCls, FilePathListCls
 //----------------------------------------------------------------------------------
 
 void BindRaylibStructs(Wren::ForeignModule& Module) {
@@ -195,31 +195,4 @@ void BindRaylibStructs(Wren::ForeignModule& Module) {
 	WaveCls.var<&Wave::sampleSize>("sampleSize");
 	WaveCls.var<&Wave::channels>("channels");
 	WaveCls.var<&Wave::data>("data");
-
-	// auto& AudioStreamCls = Module.klass<AudioStream>("AudioStream");
-	// AudioStreamCls.ctor<>();
-	// AudioStreamCls.var<&AudioStream::buffer>("buffer");
-	// AudioStreamCls.var<&AudioStream::processor>("processor");
-	// AudioStreamCls.var<&AudioStream::sampleRate>("sampleRate");
-	// AudioStreamCls.var<&AudioStream::sampleSize>("sampleSize");
-	// AudioStreamCls.var<&AudioStream::channels>("channels");
-
-	// auto& SoundCls = Module.klass<Sound>("Sound");
-	// SoundCls.ctor<>();
-	// SoundCls.var<&Sound::stream>("stream");
-	// SoundCls.var<&Sound::frameCount>("frameCount");
-
-	// auto& MusicCls = Module.klass<Music>("Music");
-	// MusicCls.ctor<>();
-	// MusicCls.var<&Music::stream>("stream");
-	// MusicCls.var<&Music::frameCount>("frameCount");
-	// MusicCls.var<&Music::looping>("looping");
-	// MusicCls.var<&Music::ctxType>("ctxType");
-	// MusicCls.var<&Music::ctxData>("ctxData");
-
-	// auto& FilePathListCls = Module.klass<FilePathList>("FilePathList");
-	// FilePathListCls.ctor<>();
-	// FilePathListCls.var<&FilePathList::capacity>("capacity");
-	// FilePathListCls.var<&FilePathList::count>("count");
-	// FilePathListCls.var<&FilePathList::paths>("paths");
 }

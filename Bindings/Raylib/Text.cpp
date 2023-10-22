@@ -16,7 +16,6 @@ void BindRaylibText(Wren::ForeignModule& Module, Wren::ForeignKlassImpl<rl>& Cla
 	Class.funcStaticExt<&rl::wLoadFontFromMemory>("LoadFontFromMemory");
 	Class.funcStaticExt<&IsFontReady>("IsFontReady");
 	Class.funcStaticExt<&LoadFontData>("LoadFontData");
-	// Class.funcStaticExt<&GenImageFontAtlas>("GenImageFontAtlas");
 	Class.funcStaticExt<&UnloadFontData>("UnloadFontData");
 	Class.funcStaticExt<&UnloadFont>("UnloadFont");
 	Class.funcStaticExt<&rl::wExportFontAsCode>("ExportFontAsCode");

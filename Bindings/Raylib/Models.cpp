@@ -80,18 +80,9 @@ void BindModuleels(Wren::ForeignModule& Module, Wren::ForeignKlassImpl<rl>& Clas
 	Class.funcStaticExt<&GenMeshCubicmap>("GenMeshCubicmap");
 
 	// Material loading/unloading functions
-	Class.funcStaticExt<&rl::wLoadMaterials>("LoadMaterials");
-	Class.funcStaticExt<&LoadMaterialDefault>("LoadMaterialDefault");
-	Class.funcStaticExt<&IsMaterialReady>("IsMaterialReady");
-	Class.funcStaticExt<&UnloadMaterial>("UnloadMaterial");
-	Class.funcStaticExt<&SetMaterialTexture>("SetMaterialTexture");
 	Class.funcStaticExt<&SetModelMeshMaterial>("SetModelMeshMaterial");
 
 	// Model animations loading/unloading functions
-	Class.funcStaticExt<&rl::wLoadModelAnimations>("LoadModelAnimations");
-	Class.funcStaticExt<&UpdateModelAnimation>("UpdateModelAnimation");
-	Class.funcStaticExt<&UnloadModelAnimation>("UnloadModelAnimation");
-	Class.funcStaticExt<&UnloadModelAnimations>("UnloadModelAnimations");
 	Class.funcStaticExt<&IsModelAnimationValid>("IsModelAnimationValid");
 
 	// Collision detection functions

@@ -8,7 +8,7 @@ namespace Wren = wrenbind17;
 //------------------------------------------------------------------------------------
 
 void BindRaylibCore(Wren::ForeignModule& Module, Wren::ForeignKlassImpl<rl>& Class) {
-
+ 
 	// Window-related functions
 	Class.funcStaticExt<&rl::wInitWindow>("InitWindow");
 	Class.funcStaticExt<&WindowShouldClose>("WindowShouldClose");
@@ -89,10 +89,6 @@ void BindRaylibCore(Wren::ForeignModule& Module, Wren::ForeignKlassImpl<rl>& Cla
 	Class.funcStaticExt<&EndVrStereoMode>("EndVrStereoMode");
 
 	// VR stereo config functions for VR simulator
-	// NOTE: PARAMETER TYPES ARE NOT BINDED
-	// I.E. THESE FUNCTIONS ARE USELESS FOR NOW
-	Class.funcStaticExt<&LoadVrStereoConfig>("LoadVrStereoConfig");
-	Class.funcStaticExt<&UnloadVrStereoConfig>("UnloadVrStereoConfig");
 
 	// Shader management functions
 	Class.funcStaticExt<&rl::wLoadShader>("LoadShader");
@@ -135,9 +131,6 @@ void BindRaylibCore(Wren::ForeignModule& Module, Wren::ForeignKlassImpl<rl>& Cla
 
 	// Set custom callbacks
 	// Files management functions
-	// Class.funcStaticExt<&rl::wLoadFileData>("LoadFileData");
-	// Class.funcStaticExt<&rl::wSaveFileData>("SaveFileData");
-	// Class.funcStaticExt<&rl::wExportDataAsCode>("ExportDataAsCode");
 	Class.funcStaticExt<&rl::wLoadFileText>("LoadFileText"); 
 	Class.funcStaticExt<&rl::wSaveFileText>("SaveFileText");
 	Class.funcStaticExt<&rl::wFileExists>("FileExists");
