@@ -24,6 +24,35 @@ typedef enum {
 
 which can be `import`ed in [wren] as `MOUSE_BUTTON` and be used like `MOUSE_BUTTON["LEFT"]` cuz I don't want you to import every single enum manually like `import "raylib" for MOUSE_BUTTON_LEFT, MOUSE_BUTTON_RIGHT, MOUSE_BUTTON_MIDDLE, MOUSE_BUTTON_SIDE, MOUSE_BUTTON_EXTRA, MOUSE_BUTTON_FORWARD, MOUSE_BUTTON_BACK`
 
+## How to use classes?
+
+As you may have noticed in [Cube2D.hpp], all the classes and functions have been wrapped in `namespace Engine` but I was a little lazy to let you be able to do `Engine.Rect` for equivelent of `Engine::Rect`
+
+So you do it as following instead.
+
+### Classes
+
+`import "Cube2D" for Scene, Rect`
+
+### Functions
+
+`import "Cube2D" for Engine`
+
+You don't need another line for this just prepend `Engine, ` to the statement used for classes such as
+`import "Cube2D" for Engine, Scene, Rect`
+
+And use the functions like
+
+`Engine.WhatEverFunction()`
+
+### Others
+
+Its same for all modules.
+
+You just need to learn keywords, like `Engine` from "Cube2D"
+- `RL` from `raylib`
+- `RM` from `raymath`
+
 ## What Cube2D Engine Doesn't Bind?
 
 Q: Wait, what? I thought Cube2D Engine binds everything from those files.
@@ -56,6 +85,9 @@ A: Nope, it works exactly the same.
 
 Q: So why we were using `.Base` for `Engine.WASDMovement`?
 A: `Engine.WASDMovement` takes `OrignalRect` aka C++ `Rect` to move it but `Rect` in [wren] is a [wren] `class` so it throws a bad cast error so I added a `.Base` getter to get the real deal which you can pass onto `Engine.WASDMovement`.
+
+#### `Init` & `Close` 
+Those two are intentionally not bind-ed as they are handled by the engine.
 
 ### raymath
 

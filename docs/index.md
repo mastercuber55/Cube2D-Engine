@@ -18,6 +18,13 @@ Cube2D Engine, A minimal 2D simple and easy to use game development engine that 
 - Automatic asset management using [Cube2D Framework]
 - Scene Management using [Cube2D Framework]
 
+## Upcoming
+They maybe canceled later on.
+- Networking with [nbnet]
+- Audio Management
+- Shapes other than Rect.
+- Whatever [Issues On Github] says.
+
 ## Example
 
 Whats a programming project without example on its home page?
@@ -51,5 +58,7 @@ class SceneGame is Scene {
 
 [wren]: https://wren.io
 [raylib]: https://raylib.com
+[nbnet]: https://nathhb.github.io/nbnet
 [raymath]: https://github.com/raysan5/raylib/blob/master/src/raylib.h
 [Cube2D Framework]: https://github.com/mastercuber55/Cube2D-Framework
+[Issues On Github]: https://github.com/mastercuber55/Cube2D-Engine/issues
