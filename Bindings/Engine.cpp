@@ -9,7 +9,7 @@ struct EngineCls {};
 void BindEngine(Wren::VM & VM) {
 	auto& Module = VM.module("Cube2D");
 
-	Module.append("import \"raylib\" for RL, KEY, COLOR");
+	Module.append("import \"raylib\" for RL, KEY, COLOR, Rectangle");
 
 	auto& Cube2DCls = Module.klass<EngineCls>("Engine");
  
@@ -79,7 +79,6 @@ void BindEngine(Wren::VM & VM) {
 
 	RectCls.func<&Engine::Rect::SetPosition>("SetPosition");
 	RectCls.func<&Engine::Rect::SetTextureFile>("SetTextureFile");
-	RectCls.func<&Engine::Rect::SetTint>("SetTint");
 	RectCls.func<&Engine::Rect::Draw>("Draw");
 
 	RectCls.func<&Engine::Rect::GetCenter>("GetCenter");
@@ -105,12 +104,13 @@ void BindEngine(Wren::VM & VM) {
 		 	Rotation=(rhs) { _Base.Rotation=rhs }
 		 	TextureFile { _Base.TextureFile }
 		 	TextureFile=(rhs) { _Base.TextureFile=rhs }
+		 	Source { _Base.Source }
+		 	Source=(rhs) { _Base.Source=rhs }
 		 	Tint { _Base.Tint }
 		 	Tint=(rhs) { _Base.Tint=rhs }
 
 		 	SetPosition(rhs) { _Base.SetPosition(rhs) }
 		 	SetTextureFile(rhs) { _Base.SetTextureFile(rhs) }
-		 	SetTint(rhs) { _Base.SetTint(rhs) }
 		 	Draw() { _Base.Draw() }
 		 	GetCenter() { _Base.GetCenter() }
 		 	GetPosition() { _Base.GetPosition() }
@@ -120,6 +120,14 @@ void BindEngine(Wren::VM & VM) {
 
 			Base { _Base }  
 		}
+	)");
+
+	Module.append(R"(
+		var CGE_WHOLE_FILE = Rectangle.new()
+		CGE_WHOLE_FILE.x = 0
+		CGE_WHOLE_FILE.y = 0
+		CGE_WHOLE_FILE.width = -1
+		CGE_WHOLE_FILE.height = -1
 	)");
 
 }

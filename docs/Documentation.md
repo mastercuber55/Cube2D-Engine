@@ -51,11 +51,11 @@ A: Nope, it works exactly the same.
 {: .note }
 `Rect` is bind-ed into wren but there's a catch.
 
-`Rect` is a `class` for easier rectangular manipulation which you would also like to add inheritance to create stuff like entity, tile, player, enemy, etc. but `Rect` is a little more hard `class` to be recreated in wren, so I created bind-ed `Rect` `class` from c++ as `EngineRect` in wren and created a wrapper `class` in purely in wren which calls `EngineRect` behind the scenes   
+`Rect` is a `class` for easier rectangular manipulation which you would also like to add inheritance to create stuff like entity, tile, player, enemy, etc. but `Rect` is a little more hard `class` to be recreated in wren, so I created bind-ed `Rect` `class` from c++ as `OrignalRect` in wren and created a wrapper `class` in purely in wren which calls `OrignalRect` behind the scenes   
 
 
 Q: So why we were using `.Base` for `Engine.WASDMovement`?
-A: `Engine.WASDMovement` takes `EngineRect` aka C++ `Rect` to move it but `Rect` in [wren] is a [wren] `class` so it throws a bad cast error so I added a `.Base` getter to get the real deal which you can pass onto `Engine.WASDMovement`.
+A: `Engine.WASDMovement` takes `OrignalRect` aka C++ `Rect` to move it but `Rect` in [wren] is a [wren] `class` so it throws a bad cast error so I added a `.Base` getter to get the real deal which you can pass onto `Engine.WASDMovement`.
 
 ### raymath
 
