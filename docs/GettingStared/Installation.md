@@ -1,6 +1,7 @@
 ---
-title: Getting Started
+title: Installation
 layout: default
+parent: Getting Started
 nav_order: 2
 ---
 
@@ -44,3 +45,5 @@ but you gotta learn how to use it of course.
 
 [issues tab on github]: https://github.com/mastercuber55/Cube2D-Engine/Issues
 [Build From Source]: https://just-the-docs.com/docs/navigation-structure/#Build-From-Source
+[raylib]: https://raylib.com
+[wren]: https://wren.io
