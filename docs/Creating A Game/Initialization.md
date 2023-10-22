@@ -7,7 +7,7 @@ nav_order: 2
 
 # Initialization
 
-Any projects needs a initializer of its own, so create a file in your desired scripts folder with your desired name ( I Like Scripts/Main.wren)
+Any projects needs a initializer of its own, so create a file in your desired scripts folder with your desired name ( I Like Scripts/Main.wren ) but of course you need it specified in `Game.wren`
 
 For now, lets make a simple game where you have to move player around.
 
