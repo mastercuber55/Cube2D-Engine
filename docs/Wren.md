@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Wren
 layout: default
 nav_order: 3
 ---
@@ -76,6 +76,9 @@ import "Scenes/SceneTitle" for SceneGame
 // As you see, .wren is optional for my engine.
 ```
 
+{: .note }
+`import` statement in my engine doesn't look for modules from the current file location instead it looks for modules in configured folder in `Game.wren`
+
 ### Classes
 
 ```js
@@ -98,5 +101,13 @@ class Entity is Rect {
 }
 ```
 
+### So Why Did We Choose Wren?
+
+- Dynamic Typing
+- No Semicolons
+- Fast
+- Modular
+- Classes
+- Inheritance
 
 [wren]: https://wren.io

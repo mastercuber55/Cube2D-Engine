@@ -29,3 +29,5 @@ var Path = {
 	"SceneError": 	"Scenes/SceneError.wren"
 }
 ```
+
+As for the current version, it is a absolute must that you have a file named Game.wren in same folder as Cube2D executable or it will crash but sooner or later we will make it so that the engine lets you know that no Game.wren was found atleast.

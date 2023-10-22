@@ -14,7 +14,7 @@ Cube2D Engine, A minimal 2D simple and easy to use game development engine that 
 - Simple And Easy To Use
 - Highly Customizable
 - Utilizes [wren] as its scripting language.
-- Binds all of [raylib], [raymath], [Cube2D Framework]
+- Binds almost all of [raylib], [raymath], [Cube2D Framework]
 - Automatic asset management using [Cube2D Framework]
 - Scene Management using [Cube2D Framework]
 
