@@ -1,11 +1,11 @@
 ---
-title: Wren
+title: Learn Wren
 layout: default
 nav_order: 3
 ---
 
-# Wren
-Over here we will learn a little about [wren] and why we choose [wren].
+# Learn Wren
+Over here we will learn a little about [wren] and why we choose [wren] and btw, I **strongly encourage** to [try wren](https://wren.io/try) in your browser
 
 Here's a little example from [wren]
 
