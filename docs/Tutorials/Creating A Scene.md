@@ -13,6 +13,7 @@ Lets create a simple scene where you can move around player.
 - Create a file for your scene with your desired name ( I Prefer SceneExample )
 - `import "Cube2D" for Scene`
 - Create a class as following
+
 ```js
 import "Cube2D" for Scene
 
@@ -23,12 +24,14 @@ class SceneExample is Scene {
 	}
 }
 ```
+
 As you see we are inheriting Scene from the Cube2D module for our usage. So first of all we need a constructer for our new `SceneExample` class which you can use like `SceneExample.new()` but since we are inheriting `Scene` class we can also call `Scene` classes methods so our class is ready to be used like `SceneExample.new().Run()`. 
 
 - You probably wanna draw something to screen so lets draw a simple rectangle to screen for example.
 - Add `Draw() {}` method to your class.
 - `import "raylib" for COLOR`
 -  also `import` `Rect` from `Cube2D`
+
 ```js
 import "Cube2D" for Scene, Rect
 
