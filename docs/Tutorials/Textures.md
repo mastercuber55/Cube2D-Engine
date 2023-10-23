@@ -2,7 +2,7 @@
 title: Textures
 layout: default
 parent: Tutorials
-nav_order: 3
+nav_order: 4
 ---
 
 # Textures
@@ -32,3 +32,5 @@ class SceneGame is Scene {
 **The above code has been tested with correct paths.**
 
 I'll not be using single file approach from now cuz by now, you should know how to run that code and have a well defined project folder.
+
+[Cube2D Framework]: https://github.com/mastercuber55/Cube2D-Framework

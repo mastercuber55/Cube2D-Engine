@@ -2,7 +2,7 @@
 title: Config/Save Files
 layout: default
 parent: Tutorials
-nav_order: 4
+nav_order: 5
 ---
 
 # Config/Save Files
@@ -59,7 +59,7 @@ First, here's a .json file
 
 Second, Here's a .wren file
 ```js
-// File: SceneSomething.wren
+// File: SceneExample.wren
 import "Cube2D" for Engine, Scene, Rect
 import "raylib" for RL, COLOR
 import "path/to/json.wren" for JSON

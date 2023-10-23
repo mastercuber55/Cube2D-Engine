@@ -6,6 +6,8 @@ nav_order: 1
 
 # Home
 
+![Cube2D Engine](https://raw.githubusercontent.com/mastercuber55/Cube2D-Engine/main/docs/Assets/Images/Banner.png)  
+
 Cube2D Engine, A minimal 2D simple and easy to use game development engine that provides everything you need for game development and utilizes super fast and super simple [wren] as its scripting language.
 
 ## Features

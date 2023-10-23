@@ -1,15 +1,17 @@
 ---
-title: API Documentation
+title: Documentation
 layout: default
 nav_order: 3
 ---
 
 # API Documentation
 
-Cube2D Engine just binds or recreate things from [raylib], [raymath], [Cube2D Framework] so there is no need for docs of my own and as [raylib] says, you can just learn things just by looking at the cheatsheet, but in my personal opinion, switching between cheetsheet and code editor is kinda pain so just include [raylib.h], [raymath], [Cube2D.hpp] in your project and your code editor most likely supports better file switch compared to what you would do if those files were not included.
+Cube2D Engine just binds or recreate things from [raylib], [raymath], [Cube2D Framework], and as [raylib] says, you can just learn things just learn things by looking at their cheetsheet, but in my personal opinion, switching between cheetsheet and code editor is kinda pain so just include [raylib.h], [raymath], [Cube2D.hpp] in your project and your code editor most likely supports better file switch compared to what you would do if those files were not included.
+
+Now as for the Engine itself, you just gotta see the tutorials.
 
 ## How To Use Enums & Defines?
-[raylib] defines the following enums
+The following enums are few of enums defined by [raylib]. 
 ```c 
 typedef enum {
     MOUSE_BUTTON_LEFT    = 0,       // Mouse button left
@@ -55,8 +57,8 @@ You just need to learn keywords, like `Engine` from "Cube2D"
 
 ## What Cube2D Engine Doesn't Bind?
 
-Q: Wait, what? I thought Cube2D Engine binds everything from those files.
-A: Nuh uh, not currently at least.
+- Q: Wait, what? I thought Cube2D Engine binds everything from those files.
+- A: Nuh uh, not currently at least.
 
 Cube2D Engine also does not yet bind classes which have members like `float v[3]`, you know, the c style array thing. but they will be bind-ed later.
 
@@ -69,11 +71,11 @@ Lets start with the simplest, [Cube2D Framework]
 #### `Scene`
 `Scene` is a `class` for scene management which heavily relies on inheritance but for some reason [wren] doesn't support inheritance from `foreign` classes, `foreign` classes refer to classes bind-ed by the engine in our case.
 
-Q: But according to home page's example, we were totally doing inheritance of `Scene`
-A: In order to make it work I had to create equivalent of `Scene` `class` in [wren] to support inheritance which is contained in the `Cube2D` module you `import` in your wren file. 
+- Q: But according to home page's example, we were totally doing inheritance of `Scene`
+- A: In order to make it work I had to create equivalent of `Scene` `class` in [wren] to support inheritance which is contained in the `Cube2D` module you `import` in your wren file. 
 
-Q: So here will be documentation for equivalent of `Scene` `class` ?
-A: Nope, it works exactly the same.
+- Q: So here will be documentation for equivalent of `Scene` `class` ?
+- A: Nope, it works exactly the same.
 
 #### `Rect`
 
@@ -83,8 +85,8 @@ A: Nope, it works exactly the same.
 `Rect` is a `class` for easier rectangular manipulation which you would also like to add inheritance to create stuff like entity, tile, player, enemy, etc. but `Rect` is a little more hard `class` to be recreated in wren, so I created bind-ed `Rect` `class` from c++ as `OrignalRect` in wren and created a wrapper `class` in purely in wren which calls `OrignalRect` behind the scenes   
 
 
-Q: So why we were using `.Base` for `Engine.WASDMovement`?
-A: `Engine.WASDMovement` takes `OrignalRect` aka C++ `Rect` to move it but `Rect` in [wren] is a [wren] `class` so it throws a bad cast error so I added a `.Base` getter to get the real deal which you can pass onto `Engine.WASDMovement`.
+- Q: So why we were using `.Base` for `Engine.WASDMovement`?
+- A: `Engine.WASDMovement` takes `OrignalRect` aka C++ `Rect` to move it but `Rect` in [wren] is a [wren] `class` so it throws a bad cast error so I added a `.Base` getter to get the real deal which you can pass onto `Engine.WASDMovement`.
 
 #### `Init` & `Close` 
 Those two are intentionally not bind-ed as they are handled by the engine.
@@ -93,11 +95,11 @@ Those two are intentionally not bind-ed as they are handled by the engine.
 
 The next simplest one is [raymath] 
 
-Q: How do I use [raymath]'s `PI` and stuff, it doesn't follow the syntax shown in [How To Use Enums & Defines]
-A: `import "raymath" for PI, EPSILON, DEG2RAD, RAD2DEG`
+- Q: How do I use [raymath]'s `PI` and stuff, it doesn't follow the syntax shown in [How To Use Enums & Defines]
+- A: `import "raymath" for PI, EPSILON, DEG2RAD, RAD2DEG`
 
-Q: What about `MatrixToFloat` and `Vector3ToFloat`?
-A: Later.
+- Q: What about `MatrixToFloat` and `Vector3ToFloat`?
+- A: Later.
 
 #### Things that [raylib] defines
 It would be real dumb to rebind things that [raylib] also defines so `import` those stuff from `raylib` module.

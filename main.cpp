@@ -9,6 +9,29 @@
 
 namespace Wren = wrenbind17;
   
+struct SceneError : Engine::Scene {
+
+	std::string Error;
+	Vector2 Size;
+
+    SceneError(std::string Error) {
+    	this->Error = Error;
+    	Size = MeasureTextEx(GetFontDefault(), Error.c_str(), 24, 2);
+
+    	SetWindowTitle("Cube2D - An Error Occured");
+    	SetWindowSize(Size.x + 24 / 2, Size.y + 24 / 2);
+    }
+
+    void Update() {}
+    void Draw() {
+    	DrawText(Error.c_str(), 24 / 4, 32 / 4, 24, RED);
+    	// GuiTextBox({0, 0, 32 * 5, 32}, const_cast<char*>(this->Error.c_str()), 0, false);
+    }
+
+    ~SceneError() {}
+};
+
+
 // struct SceneGen : Engine::Scene {
 
 // 	Vector2 anchor01 = { 0, -24 };
@@ -90,7 +113,7 @@ paths Paths;
 bool Logging;
 
 void CustomLog(int LOG_LEVEL, const char * Text, va_list Args);
-void InitFromConfig(Wren::VM & VM);
+int InitFromConfig(Wren::VM & VM);
 
 void BindRaylib(Wren::VM & VM);
 void BindRaymath(Wren::VM & VM);
@@ -127,7 +150,7 @@ int main() {
 	BindRaymath(VM);
 	BindEngine(VM);
 
-	InitFromConfig(VM);
+	if(InitFromConfig(VM) == EXIT_FAILURE) return EXIT_FAILURE;
 
 	// return SceneGen().Run();
 
@@ -165,14 +188,18 @@ void CustomLog(int LOG_LEVEL, const char * Text, va_list Args) {
 	char buffer[1024];
     vsnprintf(buffer, sizeof(buffer), Text, Args); 
 
+    std::cout << Tag << buffer << std::endl;
     LogFile.is_open() ? (LogFile << Tag << buffer << std::endl) : LogStream << Tag << buffer << std::endl;
 }
 
-void InitFromConfig(Wren::VM & VM) {
+int InitFromConfig(Wren::VM & VM) {
 		// Load Configuration File
 	if(!FileExists("Game.wren")) {
 		TraceLog(LOG_ERROR, "[%s] was not found.", "Game.wren");
-		return;
+		Engine::Init(640, 480, "Cube2D - An Error Occured");
+		SceneError("[Game.wren] was not found.").Run();
+		Engine::Close();
+		return EXIT_FAILURE;
 	}
 	VM.runFromModule("Game.wren");
 
@@ -197,7 +224,7 @@ void InitFromConfig(Wren::VM & VM) {
 
 	if(!WindowGet("Title").is<std::string>()) {
 		TraceLog(LOG_ERROR, "Window title which is a must was not provided.");
-		return; 
+		return EXIT_FAILURE; 
 	}
 	std::string Title = WindowGet("Title").as<std::string>();
 	Engine::Init(Width, Height, Title);
@@ -227,4 +254,6 @@ void InitFromConfig(Wren::VM & VM) {
 	Paths.MainScript = PathGet("MainScript").as<std::string>();
 	Paths.SceneError = PathGet("SceneError").as<std::string>();
 
+
+	return EXIT_SUCCESS;
 }
