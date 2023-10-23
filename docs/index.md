@@ -23,6 +23,8 @@ They maybe canceled later on.
 - Networking with [nbnet]
 - Audio Management
 - Shapes other than Rect.
+- CLI
+- GUI
 - Whatever [Issues On Github] says.
 
 ## Example

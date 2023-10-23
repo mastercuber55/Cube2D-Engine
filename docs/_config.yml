@@ -3,6 +3,7 @@ description: A 2D game engine which uses wren as its scripting language
 theme: just-the-docs
 
 url: https://mastercuber55.github.io/Cube2D
+logo: "/Assets/Images/Banner.png"
 favicon_ico: "/Assets/Images/favicon.ico"
 
 callouts:
@@ -11,10 +12,6 @@ callouts:
     color: blue
 
 aux_links:
-  "raylib":
-    - "https://raylib.com"
-  "wren":
-    - "https://wren.io"
   "Cube2D Engine on GitHub":
     - "https://github.com/mastercuber55/Cube2D-Engine"
 

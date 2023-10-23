@@ -1,7 +1,7 @@
 ---
 title: Textures
 layout: default
-parent: Creating A Game
+parent: Tutorials
 nav_order: 3
 ---
 
@@ -29,5 +29,6 @@ class SceneGame is Scene {
 }
 
 ```
+**The above code has been tested with correct paths.**
 
 I'll not be using single file approach from now cuz by now, you should know how to run that code and have a well defined project folder.

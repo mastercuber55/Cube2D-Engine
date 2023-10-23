@@ -1,7 +1,7 @@
 ---
 title: Initialization
 layout: default
-parent: Creating A Game
+parent: Tutorials
 nav_order: 2
 ---
 
@@ -36,7 +36,7 @@ class SceneGame is Scene {
 SceneGame.new().Run()
 
 ```
-
+**The above code has been tested with correct paths.**
 Very Minimal, but you can do a lots of initialization stuff for your game like loading config files etc.
 speaking of loading config files, you surely want some sort of configuration data saving file etc.
 And Cube2D Engine provides nothing of a sort but there's a alternative that takes no time at all to setup.
@@ -51,5 +51,5 @@ import "Scenes/SceneGame.wren" for SceneGame
 SceneGame.new().Run()
 
 ```
-
+**The above code has been tested with correct paths.**
 As you see you are importing `SceneGame` only not the whole file so any code in that file won't be ran
