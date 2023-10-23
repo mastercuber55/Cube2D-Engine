@@ -6,7 +6,7 @@ nav_order: 4
 ---
 
 # Config/Save Files
-You probably need files somewhat files for user configuration or for saving user data to be used in the next session. However, Cube2D Engine supports nothing of a sort but the original idea was to bind [ini.h] & [json] to [wren] for configuration files and save files and previous versions of the engine were using [ini.h] instead of [Game.wren]. I did try to bind [json] to [wren] but my brain just couldn't comprehend the greatness of [json] to be bind-ed into [wren] and as for [ini.h], I never even tried binding it to [wren] so lets see how you do it.
+You probably need files somewhat files for user configuration or for saving user data to be used in the next session. However, Cube2D Engine supports nothing of a sort but the original idea was to bind [ini.h] & [json] to [wren] for configuration files and save files and previous versions of the engine were using [ini.h] instead of `Game.wren`. I did try to bind [json] to [wren] but my brain just couldn't comprehend the greatness of [json] to be bind-ed into [wren] and as for [ini.h], I never even tried binding it to [wren] so lets see how you do it.
 
 # Configuration Files (.wren Files)
 
@@ -46,7 +46,7 @@ I wasn't going to code a json library but luckily for you, someone has already m
 You need [wren-json] in your desired scripts directory.
 
 First, here's a .json file
-```json
+```js
 // File: Save.json
 {
 	"Player": {
@@ -99,3 +99,8 @@ If I'm correct, [wren-json] doesn't have a file loading or saving system or noth
 
 - Q: So why can't we use it for manual user configuration?
 - A: [wren-json] stringifys json objects into a single lined .json code and when its saved your user configuration file will become a single lined file and hard for user to configure whereas in non-manual configuration i.e. in game options configuration the single lining doesn't really matter.
+
+[ini.h]: https://giosali.github.io/ini.h/
+[json]: https://json.nlohmann.me/
+[wren]: https://wren.io
+[wren-json]: https://github.com/brandly/wren-json
