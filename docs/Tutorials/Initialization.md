@@ -16,7 +16,7 @@ For now, lets make a simple game where you have to move player around.
 // import whatever you need.
 import "raylib" for RL, COLOR
 import "raymath" for RM
-import "Cube2D" for Engine, Scene, Rect
+import "Engine"
 
 // Sorry, Coudn't think of much here.
 

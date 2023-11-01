@@ -1,0 +1,2 @@
+[INFO] Initializing Cube2D Engine
+[ERROR] [main.wren] was not found.

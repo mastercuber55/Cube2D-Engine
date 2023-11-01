@@ -19,7 +19,7 @@ see [Build From Source]
 
 ## Building From Source
 ### Requirements
-- A C++17+ Compiler Installed ( I Use MinGW32 )
+- A C++17 Compiler Installed ( I Use MinGW32 )
 - [raylib] Installed
 - [wren] Installed
 

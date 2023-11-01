@@ -11,11 +11,11 @@ Lets create a simple scene where you can move around player.
 
 - Create a folder named "Scenes" in your desired `Scripts` folder (optional)
 - Create a file for your scene with your desired name ( I Prefer SceneExample )
-- `import "Cube2D" for Scene`
+- `import "Engine"`
 - Create a class as following
 
 ```js
-import "Cube2D" for Scene
+import "Engine"
 
 
 class SceneExample is Scene {

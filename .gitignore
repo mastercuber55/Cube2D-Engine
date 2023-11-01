@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/c++,sublimetext
-# Edit at https://www.toptal.com/developers/gitignore?templates=c++,sublimetext
+# Created by https://www.toptal.com/developers/gitignore/api/images,sublimetext,c++
+# Edit at https://www.toptal.com/developers/gitignore?templates=images,sublimetext,c++
 
 ### C++ ###
 # Prerequisites
@@ -10,7 +10,6 @@
 *.lo
 *.o
 *.obj
-*.res
 
 # Precompiled Headers
 *.gch
@@ -35,6 +34,71 @@
 *.exe
 *.out
 *.app
+
+### Images ###
+# JPEG
+*.jpg
+*.jpeg
+*.jpe
+*.jif
+*.jfif
+*.jfi
+
+# JPEG 2000
+*.jp2
+*.j2k
+*.jpf
+*.jpx
+*.jpm
+*.mj2
+
+# JPEG XR
+*.jxr
+*.hdp
+*.wdp
+
+# Graphics Interchange Format
+*.gif
+
+# RAW
+*.raw
+
+# Web P
+*.webp
+
+# Portable Network Graphics
+*.png
+
+# Animated Portable Network Graphics
+*.apng
+
+# Multiple-image Network Graphics
+*.mng
+
+# Tagged Image File Format
+*.tiff
+*.tif
+
+# Scalable Vector Graphics
+*.svg
+*.svgz
+
+# Portable Document Format
+*.pdf
+
+# X BitMap
+*.xbm
+
+# BMP
+*.bmp
+*.dib
+
+# ICO
+*.ico
+
+# 3D Images
+*.3dm
+*.max
 
 ### SublimeText ###
 # Cache files for Sublime Text
@@ -69,7 +133,4 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
-# End of https://www.toptal.com/developers/gitignore/api/c++,sublimetext
-
-*.wren
-*.png
+# End of https://www.toptal.com/developers/gitignore/api/images,sublimetext,c++

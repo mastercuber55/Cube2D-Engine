@@ -9,7 +9,7 @@ nav_order: 4
 [Cube2D Framework]'s `Rect` `class` is the best way to use textures if you are creating rectangles.
 
 ```cpp
-import "Cube2D" for Engine, Scene, Rect
+import "Engine" for Engine, Scene, Rect
 
 class SceneGame is Scene {
 	construct new() {
